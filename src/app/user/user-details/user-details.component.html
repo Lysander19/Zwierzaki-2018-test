@@ -1,0 +1,145 @@
+<form *ngIf="isUserLogged()"  (ngSubmit)="f.form.valid && send()" #f="ngForm">
+    <div class="form-group">
+        <label for="firstname">Imię</label>
+        <input #firstname="ngModel" [(ngModel)]="model.firstname" name="firstname" type="text" class="form-control"
+               id="firstname" placeholder="Imię">
+    </div>
+    <div class="form-group">
+        <label for="lastname">Nazwisko</label>
+        <input #lastname="ngModel" [(ngModel)]="model.lastname" name="lastname" type="text" class="form-control"
+               id="lastname" placeholder="Nazwisko">
+    </div>
+    <div class="form-group">
+        <label for="date">Data urodzenia</label>
+        <input type="date" class="form-control" id="date" placeholder="Data urodzenia">
+    </div>
+    <div class="form-group">
+        <label for="city">Miasto i dzielnica</label>
+        <input  #city="ngModel" [(ngModel)]="model.city" name="city" type="text" class="form-control" id="city" placeholder="Miasto i dzielnica">
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Właściciel
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Opiekun
+        </label>
+    </div>
+    <label>Typ zwierzątka</label>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> kot
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> pies
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> szczur/mysz
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> wąż/jaszczurka
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> rybki
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> inne
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Doświadczenie w opiece (oczekiwane/ oferowane)</label>
+        <select class="form-control">
+            <option value="1">brak</option>
+            <option value="2">około miesiąca</option>
+            <option value="3">około 6 miesiący</option>
+            <option value="4">około 1 roku</option>
+            <option value="5">3 lata i więcej</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Opis</label>
+        <textarea #description="ngModel" [(ngModel)]="model.description" name="description" class="form-control"
+                  rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Zapisz</button>
+</form>
+
+<!--<section class="middle_screen">-->
+<!--<div class="row">-->
+<!--<div class="col-1">-->
+<!--<container class="left_panel">-->
+<!--<nav class="side_menu">-->
+<!--<ul>-->
+<!--<li>  <a routerLink="/home" routerLinkActive="active">Home</a></li>-->
+<!--<li><a href="#">Szukam opiekuna</a></li>-->
+<!--<li><a href="#">Zaopiekuję się pupilem</a></li>-->
+<!--<li><a href="#">Profile</a></li>-->
+<!--<li><a href="zwierzaki-inz-2018\src\regulamin.html">Regulamin</a></li>-->
+<!--<li><a href="#">O nas</a></li>-->
+<!--</ul>-->
+<!--</nav>-->
+<!--</container>-->
+<!--</div>-->
+<!--<div class="col-4">-->
+<!--<section class="main_content">-->
+<!--<form class="form1" (ngSubmit)="f.form.valid && send()" #f="ngForm">-->
+<!--<fieldset>-->
+<!--<h1 class="h1_register">Załóż konto:</h1>-->
+<!--<h3 class="h3_register">Wypełnij poniższe pola:</h3>-->
+<!--<div class="requiredInfo">* Pola wymagane</div>-->
+<!--<div>-->
+<!--<input type="checkbox" name="wlasciciel" value="checkbox1">Właściciel zwierzaka-->
+<!--<input class="checkbox" type="checkbox" name="opiekun" value="checkbox2">Opiekun zwierzaka-->
+<!--</div>-->
+<!--<p class="p_register">Dane osobowe:</p>-->
+<!--<label class="label_register">Imię:-->
+<!--<input #firstname="ngModel" [(ngModel)]="model.firstname" class= "text" type="text" name="username" placeholder="max 255 znakow" size="73"></label>-->
+<!--<label class="label_register">Nazwisko:-->
+<!--<input  #lastname="ngModel" [(ngModel)]="model.lastname"  class= "text" type="text" name="surname" placeholder="max 100 znakow"></label>-->
+<!--<label class="label_register">Data urodzenia:<input class="input1" type="date" name="Data urodzenia" value="Podaj datę urodzenia" size="73">-->
+<!--</label>-->
+<!--<p class="p_register">Dane dodatkowe:</p>-->
+<!--<label class="label_register">Podaj miasto i dzielnicę:-->
+<!--<input  #lastname="ngModel" [(ngModel)]="model.city" class= "text" type="text" name="townName" placeholder="max 100 znakow"></label>-->
+<!--<label class="label_register">Dodaj zdjęcie profilowe:-->
+<!--<input type="file" name="photo" placeholder="max 100 znakow"></label>-->
+<!--<label class="label_register">Wybierz typ zwierzaka:</label>-->
+<!--<div class="animal_types">-->
+<!--<input type="checkbox" name="pet1" value="checkbox1">kot-->
+<!--<input class="checkbox" type="checkbox" name="pet2" value="checkbox1" >pies-->
+<!--<input class="checkbox" type="checkbox" name="pet3" value="checkbox1" >chomik/ świnka morska-->
+<!--<input class="checkbox" type="checkbox" name="pet4" value="checkbox1" >królik-->
+<!--<input class="checkbox" type="checkbox" name="pet5" value="checkbox1" >żółw-->
+<!--<input class="checkbox" type="checkbox" name="pet6" value="checkbox2" >rybki-->
+<!--<input class="checkbox" type="checkbox" name="pet7" value="checkbox1" >wąż/ jaszczurka-->
+<!--<input class="checkbox" type="checkbox" name="pet8" value="checkbox2" >szczur/ mysz-->
+<!--<input class="checkbox" type="checkbox" name="pet9" value="checkbox1" >inne-->
+<!--</div>-->
+<!--<label class="label_register">Doświadczenie w opiece (oczekiwane/ oferowane):-->
+<!--<select class="select" name="selectExper"><option value="">Wybierz</option>-->
+<!--<option value="1">brak</option>-->
+<!--<option value="2">około miesiąca</option>-->
+<!--<option value="3">około 6 miesiący</option>-->
+<!--<option value="4">około 1 roku</option>-->
+<!--<option value="5">3 lata i więcej</option>-->
+<!--</select></label>-->
+<!--<label for="info">Opis Twojego profilu:<textarea  #description="ngModel" [(ngModel)]="model.description" class="text" id="info" name="name" rows="11" cols="80" placeholder="W tym miejscu możesz opisać siebie lub swojego pupila"></textarea></label>-->
+<!--<div class="submit"><input type="submit" name="submit" formaction="zwierzaki-inz-2018\src\logged_user.html" value="Zarejestruj"></div>-->
+<!--</fieldset>-->
+<!--</form>-->
+<!--</section>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->

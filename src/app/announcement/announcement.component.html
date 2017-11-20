@@ -1,0 +1,210 @@
+<main role="main">
+
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <section class="jumbotron text-center">
+                        <div class="container">
+                            <h1 class="jumbotron-heading">Ogłoszenia</h1>
+                            <p class="lead text-muted">Korzystaj z bocznego menu, żeby filtrować ogłoszenia. Jeśli
+                                chcesz dodać nowe ogłoszenie, kliknij na przycisk poniżej. Pamiętaj, że jedynie
+                                zarejestrowani użytkownicy mogą dodawać ogłoszenia.
+                            </p>
+
+                            <div class="add_new">
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                                        data-target="#dodajOgl">+ Dodaj Ogłoszenie
+                                </button>
+                            </div>
+
+                            <!-- Pop-up na dodwanie ogłoszenia -->
+
+                            <div id="dodajOgl" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Dodaj ogłoszenie</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input class="checkbox" type="radio" name="owner" value="wlasciciel">Szukam
+                                            opiekuna
+                                            <input class="checkbox" type="radio" name="owner" value="opiekun">Szukam
+                                            pracy jako opiekun
+                                            <label class="label_register" id="filter_mar">Rodzaj zwierzęcia:</label>
+                                            <div class="animal_types">
+                                                <input class="checkbox" type="checkbox" name="pet1" value="checkbox1">kot
+                                                <input class="checkbox" type="checkbox" name="pet2" value="checkbox1">pies
+                                                <input class="checkbox" type="checkbox" name="pet9" value="checkbox1">inny
+                                            </div>
+                                            <label class="label_register" id="filter_mar">Województwo:<br/>
+                                                <select class="select" name="selectExper">
+                                                    <option value="">dowolne</option>
+                                                    <option value="1">dolnośląskie</option>
+                                                    <option value="2">kujawsko-pomorskie</option>
+                                                    <option value="3">lubelskie</option>
+                                                    <option value="4">lubuskie</option>
+                                                    <option value="5">łódzkie</option>
+                                                    <option value="6">małopolskie</option>
+                                                    <option value="7">mazowieckie</option>
+                                                    <option value="8">opolskie</option>
+                                                    <option value="9">podkarpackie</option>
+                                                    <option value="10">podlaskie</option>
+                                                    <option value="11">pomorskie</option>
+                                                    <option value="12">śląskie</option>
+                                                    <option value="13">świętokrzyskie</option>
+                                                    <option value="14">warmińsko-mazurskie</option>
+                                                    <option value="15">wielkopolskie</option>
+                                                    <option value="16">zachodniopomorskie</option>
+                                                </select></label>
+                                            <label class="label_register">Wpisz miasto/ dzielnicę:<br/>
+                                                <input class="text" type="text" name="townName">
+                                            </label>
+                                            <label class="label_register" id="filter_mar">Doświadczenie w opiece:<br/>
+                                                <select class="select" name="selectExper">
+                                                    <option value="">dowolne</option>
+                                                    <option value="1">brak</option>
+                                                    <option value="2">0-6 miesięcy</option>
+                                                    <option value="3">6 miesięcy - 1 rok</option>
+                                                    <option value="4">1-3 lata</option>
+                                                    <option value="5">3 lata i więcej</option>
+                                                </select></label>
+                                            <label for="info" id="tresc">Treść ogłoszenia:<br/><textarea class="text"
+                                                                                                         id="info"
+                                                                                                         name="name"
+                                                                                                         rows="6"
+                                                                                                         cols="40"
+                                                                                                         placeholder="Kliknij tutaj i zacznij pisać"></textarea></label>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Dodaj
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="album text-muted">
+
+                        <div class="row">
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">12-15 grudnia, szukam opieki dla kota</a>
+                            </div>
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Szukam osoby, która wyprowadzałaby psa pod moją
+                                    nieobecność</a>
+                            </div>
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Zaopiekuję się psem - spacery, kamiermienie, zabawa</a>
+                            </div>
+
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Opieka nad psem na weekend.</a>
+                            </div>
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Karmienie rybek - 10-17/11.</a>
+                            </div>
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Poranne wyprowadzanie psa</a>
+                            </div>
+
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Kogoś do opieki nad kotem raz w tygodniu, Wola</a>
+                            </div>
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Dziewczyna z doświadczeniem w schronisku chętnie
+                                    zaopiekuje się psem/kotem</a>
+                            </div>
+                            <div class="card">
+                                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                                <a href="#" class="card-text">Przyjazny kot poszukuje kogoś do towarzystwa podczas
+                                    nieobecności właściciela</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarRight" role="navigation">
+                    <form class="filter">
+                        <fieldset>
+                            <input class="checkbox" type="radio" name="owner" value="wlasciciel">Szukam opiekuna
+                            <br/><br/>
+                            <input class="checkbox" type="radio" name="owner" value="opiekun">Szukam pracy jako opiekun
+                            <label class="label_register" id="filter_mar">Rodzaj zwierzęcia:</label>
+                            <div class="animal_types">
+                                <input class="checkbox" type="checkbox" name="pet1" value="checkbox1">kot <br/>
+                                <input class="checkbox" type="checkbox" name="pet2" value="checkbox1">pies <br/>
+                                <input class="checkbox" type="checkbox" name="pet9" value="checkbox1">inny
+                            </div>
+                            <label class="label_register" id="filter_mar">Województwo:
+                                <select class="select" name="selectExper" id="filter_select">
+                                    <option value="">dowolne</option>
+                                    <option value="1">dolnośląskie</option>
+                                    <option value="2">kujawsko-pomorskie</option>
+                                    <option value="3">lubelskie</option>
+                                    <option value="4">lubuskie</option>
+                                    <option value="5">łódzkie</option>
+                                    <option value="6">małopolskie</option>
+                                    <option value="7">mazowieckie</option>
+                                    <option value="8">opolskie</option>
+                                    <option value="9">podkarpackie</option>
+                                    <option value="10">podlaskie</option>
+                                    <option value="11">pomorskie</option>
+                                    <option value="12">śląskie</option>
+                                    <option value="13">świętokrzyskie</option>
+                                    <option value="14">warmińsko-mazurskie</option>
+                                    <option value="15">wielkopolskie</option>
+                                    <option value="16">zachodniopomorskie</option>
+                                </select></label>
+                            <label class="label_register">Wpisz miasto/ dzielnicę:
+                                <input class="text" type="text" name="townName" id="filter_select">
+                            </label>
+                            <label class="label_register" id="filter_mar">Doświadczenie w opiece:</label>
+                            <select class="select" name="selectExper" id="filter_select">
+                                <option value="">dowolne</option>
+                                <option value="1">brak</option>
+                                <option value="2">0-6 miesięcy</option>
+                                <option value="3">6 miesięcy - 1 rok</option>
+                                <option value="4">1-3 lata</option>
+                                <option value="5">3 lata i więcej</option>
+                            </select>
+                            <div class="search">
+                                <input type="submit" name="submit" formaction="#" value="Szukaj">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+    $('#offcanvasleft').click(function () {
+        $('.row-offcanvas-left').toggleClass('active');
+    });
+
+    $('[data-toggle=offcanvasright]').click(function () {
+        $('.row-offcanvas-right').toggleClass('active');
+    });
+</script>
