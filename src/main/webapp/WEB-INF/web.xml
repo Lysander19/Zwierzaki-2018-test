@@ -21,10 +21,15 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app mlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-<display-name>Zweirzaki-2018</display-name>
+<display-name>Zwierzaki-2018</display-name>
 <welcome-file-list>
-  <welcome-file>app.component.html</welcome-file>
+  <welcome-file>home.component.html</welcome-file>
 </welcome-file-list>
+
+<servlet-mapping>
+    <servlet-name>home</servlet-name>
+    <url-pattern></url-pattern>
+</servlet-mapping>
 
 
  
