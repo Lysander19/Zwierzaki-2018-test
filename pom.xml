@@ -8,7 +8,7 @@
   <packaging>war</packaging>
  
   <name>Zwierzaki2018</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/Lysander19/Zwierzaki-2018-test</url>
  
   <dependencies>
     <dependency>
